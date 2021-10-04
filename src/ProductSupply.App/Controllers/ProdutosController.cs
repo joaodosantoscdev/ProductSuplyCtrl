@@ -18,7 +18,7 @@ namespace ProductSupply.App.Controllers
     {
         private readonly IProdutoRepository _produtoRepository;
         private readonly IFornecedorRepository _fornecedorRepository;
-        private readonly IProdutoService _ProdutoService;
+        private readonly IProdutoService _produtoService;
         private readonly IMapper _mapper;
 
         public ProdutosController(IProdutoRepository produtoRepository,
@@ -29,7 +29,7 @@ namespace ProductSupply.App.Controllers
         {
             _produtoRepository = produtoRepository;
             _fornecedorRepository = fornecedorRepository;
-            _ProdutoService = produtoService;
+            _produtoService = produtoService;
             _mapper = mapper;
         }
 
@@ -78,7 +78,7 @@ namespace ProductSupply.App.Controllers
             }
 
             produtoViewModel.Imagem = imgPrefixo + produtoViewModel.ImagemUpload.FileName;
-            await _ProdutoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
+            await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
 
             if (!OperacaoValida()) return View(produtoViewModel);
 
@@ -127,7 +127,7 @@ namespace ProductSupply.App.Controllers
             produtoAtualizacao.Valor = produtoViewModel.Valor;
             produtoAtualizacao.Ativo = produtoViewModel.Ativo;
 
-            await _ProdutoService.Atualizar(_mapper.Map<Produto>(produtoAtualizacao));
+            await _produtoService.Atualizar(_mapper.Map<Produto>(produtoAtualizacao));
 
             if (!OperacaoValida()) return View(produtoViewModel);
 
@@ -160,7 +160,7 @@ namespace ProductSupply.App.Controllers
                 return NotFound();
             }
 
-            await _ProdutoService.Remover(id);
+            await _produtoService.Remover(id);
 
             if (!OperacaoValida()) return View(produto);
 
