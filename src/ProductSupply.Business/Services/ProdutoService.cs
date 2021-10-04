@@ -10,7 +10,7 @@ namespace ProductSupply.Business.Services
     {
         private readonly IProdutoRepository _produtoRepository;
 
-        public ProdutoService(IProdutoRepository produtoRepository, 
+        public ProdutoService(IProdutoRepository produtoRepository,
                               INotificador notificador) : base(notificador)
         {
             _produtoRepository = produtoRepository;
@@ -34,7 +34,6 @@ namespace ProductSupply.Business.Services
         {
             await _produtoRepository.Remover(id);
         }
-
 
         public void Dispose()
         {

@@ -1,9 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-ProductSupply.App-6072A913-015D-40BD-86E8-45FCBE767378</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\imagens\18e0a925-49b1-4223-a8cb-22b8f19cbfec_LIVRO2.jpg" />
+    <Content Remove="wwwroot\imagens\20a53205-5406-4ff5-9867-d27e8d545c6c_LIVRO3.jpg" />
+    <Content Remove="wwwroot\imagens\2ece2ec0-8eff-47ac-b6f0-b49ae8167d11_LIVRO.jpg" />
+    <Content Remove="wwwroot\imagens\47feeae6-d3c9-404d-95e5-42462dc1e759_LIVRO.jpg" />
+    <Content Remove="wwwroot\imagens\69fb909f-9031-4075-911a-8422d9ed62f9_LIVRO3.jpg" />
+    <Content Remove="wwwroot\imagens\6a0788d0-074f-4aa4-9f46-39ad7afb2730_LIVRO2.jpg" />
+    <Content Remove="wwwroot\imagens\6f6c7f21-70a5-4040-9d29-a5cdaa8bac56_LIVRO2.jpg" />
+    <Content Remove="wwwroot\imagens\8a5dcbcd-ca7e-4aa0-88ba-fe3120372cab_LIVRO2.jpg" />
+    <Content Remove="wwwroot\imagens\e5553d2f-7777-402e-b740-b78c3f8eda95_LIVRO3.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="automapper.extensions.microsoft.dependencyinjection" Version="8.1.1" />
@@ -21,7 +33,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-    <PackageReference Include="Thinktecture.IdentityModel" Version="3.6.1" />
+    <PackageReference Include="Thinktecture.IdentityModel.Core" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>

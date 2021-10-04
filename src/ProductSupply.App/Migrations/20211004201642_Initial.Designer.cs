@@ -10,8 +10,8 @@ using ProductSupply.App.Data;
 namespace ProductSupply.App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210929030320_Inicio")]
-    partial class Inicio
+    [Migration("20211004201642_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
